@@ -1,26 +1,19 @@
-package avlc;
+
 import java.util.*;
 	
 
 public class avlc {
 	public static String mod(String s, int m) {
-
 			if (s.length() % m == 0) {
 			}
-
 			if (s.length() % m != 0) {
 
 				while (s.length() % m != 0) {
 					s = s + s.charAt(s.length() - 1);
 				}
-
 			}
-
 			return s;
 		}
-
-	
-	
 	
 	public static void main(String[] args) {
 		
@@ -163,10 +156,7 @@ int cont=0;
 					letters[1] = frase.charAt(1 + cont * 2) - 96;
 
 					cont++;
-					/*
-					 * System.out.println(matriz[0][0]+" "+matriz[0][1]);
-					 * System.out.println(matriz[1][0]+" "+matriz[1][1]);
-					 */
+				
 					a = matriz[0][0] * letters[0] + matriz[0][1] * letters[1];
 					b = matriz[1][0] * letters[0] + matriz[1][1] * letters[1];
 
@@ -214,7 +204,6 @@ int cont=0;
 
 			String lul = in.nextLine();
 			String Trocar = lul.toLowerCase().replaceAll(" ", "");
-			// System.out.println(Replacelul);
 			
 			int cont = 0;
 			System.out.println("Informe a Matriz");
@@ -294,10 +283,7 @@ int cont=0;
 					letters[1] = Trocar.charAt(1 + cont * 2) - 96;
 
 					cont++;
-					/*
-					 * System.out.println(matriz[0][0]+" "+matriz[0][1]);
-					 * System.out.println(matriz[1][0]+" "+matriz[1][1]);
-					 */
+
 					a = matriz[0][0] * letters[0] + matriz[0][1] * letters[1];
 					b = matriz[1][0] * letters[0] + matriz[1][1] * letters[1];
 
@@ -324,16 +310,8 @@ int cont=0;
 					} else if (b == 0) {
 						System.out.print("z");
 					}
-
 				}
-
 			}
-
 		}
 		}
-		
-		
-		
-		
-		
 	}
