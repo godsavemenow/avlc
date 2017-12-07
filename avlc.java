@@ -1,7 +1,6 @@
 package avlc;
 import java.util.*;
-	import Jama.Matrix;
-	import Jama.util.*;
+	
 
 public class avlc {
 	public static String mod(String s, int m) {
@@ -99,7 +98,7 @@ public class avlc {
 				
 				}
 			 else {
-				System.out.println("Matriz Inv·lida");
+				System.out.println("Matriz Inv√°lida");
 				System.exit(0);
 			}
 			
