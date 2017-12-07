@@ -2,7 +2,7 @@
 import java.util.*;
 	
 
-public class avlc {
+public class project {
 	public static String mod(String s, int m) {
 			if (s.length() % m == 0) {
 			}
@@ -27,7 +27,9 @@ public class avlc {
 			
 			in.nextLine();
 			
-			System.out.println("informe a frase a ser decodificada"); 
+			//Escolheu a opcao de decodificar
+			
+			System.out.println("Informe a frase a ser decodificada"); 
 			String frase = in.nextLine();
 
 
@@ -50,6 +52,8 @@ public class avlc {
 			double invdet=1;
 			
 			if (determinante%2== 1 & determinante != 13) {
+				
+				//verifica os determinantes e  os devidos inversos
 				
 				if (determinante==3) {
 					invdet=9;
@@ -95,20 +99,18 @@ public class avlc {
 				System.exit(0);
 			}
 			
+			//multiplica as matrizes
 			
 			matriz[0][0]=matriz[0][0]*invdet;
 			matriz[0][1]=matriz[0][1]*invdet;
 			matriz[1][0]=matriz[1][0]*invdet;
 			matriz[1][1]=matriz[1][1]*invdet;
 			
-			
 			double traderprin;
-			
 			
 			traderprin=matriz[0][0];
 			matriz[0][0]=matriz[1][1];
 			matriz[1][1]=traderprin;
-			
 			
 			matriz[1][0]=-1*matriz[1][0];
 			matriz[0][1]=-1*matriz[0][1];
@@ -143,8 +145,6 @@ public class avlc {
 			}
 			matriz[1][1] = (matriz[1][1])%26;
 			
-			
-			
 			double a, b, c;
 
 int cont=0;
@@ -160,6 +160,8 @@ int cont=0;
 					a = matriz[0][0] * letters[0] + matriz[0][1] * letters[1];
 					b = matriz[1][0] * letters[0] + matriz[1][1] * letters[1];
 
+					//Descobre o modulo
+					
 					if (a >= 26) {
 
 						a = a % 26;
@@ -168,16 +170,19 @@ int cont=0;
 
 						b = b % 26;
 					}
-
+					
+					//Soma valor para o char ser convertido
+					
 					char chara = (char) (a + 96);
 					char charb = (char) (b + 96);
 
+					//Lida com o caso do numero ser 26
+					
 					if (a != 0) {
 						System.out.print(chara);
 					} else if (a == 0) {
 						System.out.print("z");
 					}
-
 					if (b != 0) {
 						System.out.print(charb);
 					} else if (b == 0) {
@@ -192,12 +197,10 @@ int cont=0;
 	}
 
 		
-		//// CODIFICA
+		//// Escolheu opcao de codificar
 		
 		
 		if(option==1) {
-			
-			
 			
 			in.nextLine();
 			System.out.println("Informe a frase a ser codificada:");
